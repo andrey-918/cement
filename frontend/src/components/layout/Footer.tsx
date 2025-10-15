@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear()
@@ -6,18 +7,32 @@ export const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <p>&copy; {currentYear} Портфолио. Все права защищены.</p>
-        <div className="social-links">
-          <a href="https://github.com/andrey-918" target="_blank" rel="noopener noreferrer">
-            GitHub
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          &copy; {currentYear} СМ Групп. Все права защищены.
+        </motion.p>
+        <motion.div
+          className="contact-links"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <p>Тел.: 8 (916) 888-19-48 | 8 (495) 960-50-00</p>
+          <a href="https://www.tk-cm.ru" target="_blank" rel="noopener noreferrer">
+            www.tk-cm.ru
           </a>
-          <a href="https://t.me/andrey_918" target="_blank" rel="noopener noreferrer">
-            Telegram
+          <a href="https://www.wall-craft.ru" target="_blank" rel="noopener noreferrer">
+            www.wall-craft.ru
           </a>
-          <a href="mailto:karganov.an@yandex.ru">
-            Email
+          <a href="https://www.roommall.ru" target="_blank" rel="noopener noreferrer">
+            www.roommall.ru
           </a>
-        </div>
+        </motion.div>
       </div>
     </footer>
   )
