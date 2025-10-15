@@ -1,6 +1,39 @@
 import React, { useState } from 'react'
 import { motion, easeOut, easeInOut } from 'framer-motion'
 
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId)
+  if (element) {
+    const offset = 80 // высота навигации + отступ
+    const elementPosition = element.getBoundingClientRect().top
+    const offsetPosition = elementPosition + window.pageYOffset - offset
+
+    // Плавная анимация с easing
+    const startPosition = window.pageYOffset
+    const distance = offsetPosition - startPosition
+    const duration = 400 // 1 секунда
+    let startTime: number | null = null
+
+    const animation = (currentTime: number) => {
+      if (startTime === null) startTime = currentTime
+      const timeElapsed = currentTime - startTime
+      const progress = Math.min(timeElapsed / duration, 1)
+
+      // Easing функция для плавности
+      const easeInOutCubic = (t: number) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+      const easedProgress = easeInOutCubic(progress)
+
+      window.scrollTo(0, startPosition + distance * easedProgress)
+
+      if (progress < 1) {
+        requestAnimationFrame(animation)
+      }
+    }
+
+    requestAnimationFrame(animation)
+  }
+}
+
 const Home: React.FC = () => {
   const [isContactsExpanded, setIsContactsExpanded] = useState(false)
 
@@ -411,13 +444,14 @@ const Home: React.FC = () => {
         <div className="container">
           <motion.h3 variants={itemVariants}>Готовы к сотрудничеству?</motion.h3>
           <motion.p variants={itemVariants}>
-            Начните свой элитный проект уже сегодня! Первая поставка — через 25 дней.
+            Начните свой проект уже сегодня! Первая поставка — через 25 дней.
           </motion.p>
           <motion.button
             className="cta-button"
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => scrollToSection('contacts')}
           >
             Связаться с нами
           </motion.button>

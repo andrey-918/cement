@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
 const scrollToSection = (sectionId: string) => {
@@ -35,6 +35,8 @@ const scrollToSection = (sectionId: string) => {
 }
 
 export const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   const navItems = [
     { id: 'intro', label: 'Главная' },
     { id: 'advantages', label: 'Преимущества' },
@@ -47,14 +49,26 @@ export const Header: React.FC = () => {
     { id: 'contacts', label: 'Контакты' }
   ]
 
+  const handleNavClick = (sectionId: string) => {
+    scrollToSection(sectionId)
+    setIsMenuOpen(false) // Close menu after navigation
+  }
+
   return (
     <header className="header">
       <nav className="nav">
-        <ul className="nav-list">
+        <button
+          className="hamburger"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle navigation menu"
+        >
+          ☰
+        </button>
+        <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
           {navItems.map(item => (
             <li key={item.id}>
               <button
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => handleNavClick(item.id)}
                 className="nav-link"
               >
                 {item.label}
@@ -71,21 +85,6 @@ export const Header: React.FC = () => {
         >
           Поставка цемента из Ирана в Россию
         </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
-        >
-          Элитные решения для строительной отрасли
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="premium-badge"
-        >
-          <span>СМ Групп</span>
-        </motion.div>
       </div>
     </header>
   )
