@@ -170,6 +170,10 @@ body {
   align-items: center;
 }
 
+.hamburger {
+  display: none;
+}
+
 
 
 .nav-list {
@@ -666,6 +670,22 @@ body {
     line-height: 1.4;
     padding: 25px;
   }
+
+  /* Navigation for tablets */
+  .nav {
+    padding: 10px 15px;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .nav-link {
+    font-size: 0.85em;
+    padding: 8px 10px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -743,13 +763,11 @@ body {
     flex-direction: column;
     gap: 0;
     padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+    display: none;
   }
 
   .nav-list.open {
-    max-height: 500px;
+    display: flex;
   }
 
   .nav-link {

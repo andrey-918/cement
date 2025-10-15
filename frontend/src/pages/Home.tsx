@@ -1,38 +1,6 @@
 import React, { useState } from 'react'
-import { motion, easeOut, easeInOut } from 'framer-motion'
-
-const scrollToSection = (sectionId: string) => {
-  const element = document.getElementById(sectionId)
-  if (element) {
-    const offset = 80 // высота навигации + отступ
-    const elementPosition = element.getBoundingClientRect().top
-    const offsetPosition = elementPosition + window.pageYOffset - offset
-
-    // Плавная анимация с easing
-    const startPosition = window.pageYOffset
-    const distance = offsetPosition - startPosition
-    const duration = 400 // 1 секунда
-    let startTime: number | null = null
-
-    const animation = (currentTime: number) => {
-      if (startTime === null) startTime = currentTime
-      const timeElapsed = currentTime - startTime
-      const progress = Math.min(timeElapsed / duration, 1)
-
-      // Easing функция для плавности
-      const easeInOutCubic = (t: number) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
-      const easedProgress = easeInOutCubic(progress)
-
-      window.scrollTo(0, startPosition + distance * easedProgress)
-
-      if (progress < 1) {
-        requestAnimationFrame(animation)
-      }
-    }
-
-    requestAnimationFrame(animation)
-  }
-}
+import { motion, easeInOut } from 'framer-motion'
+import { scrollToSection } from '../utils/scroll'
 
 const Home: React.FC = () => {
   const [isContactsExpanded, setIsContactsExpanded] = useState(false)
@@ -356,41 +324,7 @@ const Home: React.FC = () => {
                 const newExpandedState = !isContactsExpanded;
                 setIsContactsExpanded(newExpandedState);
                 if (!newExpandedState) {
-                  setTimeout(() => {
-                    const scrollToSection = (sectionId: string) => {
-                      const element = document.getElementById(sectionId)
-                      if (element) {
-                        const offset = 80 // высота навигации + отступ
-                        const elementPosition = element.getBoundingClientRect().top
-                        const offsetPosition = elementPosition + window.pageYOffset - offset
-
-                        // Плавная анимация с easing
-                        const startPosition = window.pageYOffset
-                        const distance = offsetPosition - startPosition
-                        const duration = 400 // 1 секунда
-                        let startTime: number | null = null
-
-                        const animation = (currentTime: number) => {
-                          if (startTime === null) startTime = currentTime
-                          const timeElapsed = currentTime - startTime
-                          const progress = Math.min(timeElapsed / duration, 1)
-
-                          // Easing функция для плавности
-                          const easeInOutCubic = (t: number) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
-                          const easedProgress = easeInOutCubic(progress)
-
-                          window.scrollTo(0, startPosition + distance * easedProgress)
-
-                          if (progress < 1) {
-                            requestAnimationFrame(animation)
-                          }
-                        }
-
-                        requestAnimationFrame(animation)
-                      }
-                    }
-                    scrollToSection('contacts')
-                  }, 10);
+                  scrollToSection('contacts')
                 }
               }}
               className="expand-button"
