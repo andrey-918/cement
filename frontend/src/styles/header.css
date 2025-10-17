@@ -1,0 +1,44 @@
+
+.header {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-middle) 50%, var(--bg-gradient-end) 100%),
+              url('ship_at_sea.jpg') no-repeat center center/cover;
+  text-align: center;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, transparent 30%, var(--header-overlay) 100%);
+}
+
+.header .container {
+  position: relative;
+  z-index: 2;
+}
+
+.header h1 {
+  font-size: 4em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 0 30px var(--section-shadow);
+  background: linear-gradient(45deg, var(--header-h1-gradient-start), var(--header-h1-gradient-middle), var(--header-h1-gradient-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header p {
+  font-size: 1.5em;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
