@@ -283,11 +283,15 @@ body {
   box-shadow: 0 10px 30px var(--advantages-shadow);
 }
 
+.delivery li strong {
+  margin-left: 50px;
+}
+
 .delivery li::before {
   content: counter(step-counter);
   position: absolute;
-  left: 30px;
-  top: 30px;
+  left: 10px;
+  top: 15px;
   font-weight: bold;
   color: var(--delivery-number-color);
   font-size: 2em;
