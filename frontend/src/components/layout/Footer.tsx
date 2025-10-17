@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <p>Тел.: 8 (916) 888-19-48 | 8 (495) 960-50-00</p>
+          <p>Тел.: 8 (495) 960-50-00</p>
           <a href="https://www.tk-cm.ru" target="_blank" rel="noopener noreferrer">
             www.tk-cm.ru
           </a>
