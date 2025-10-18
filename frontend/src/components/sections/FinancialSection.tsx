@@ -16,7 +16,7 @@ const FinancialSection: React.FC = () => {
         <motion.h2 variants={itemVariants}>Финансовая эффективность</motion.h2>
         <motion.ul variants={itemVariants}>
           <motion.li variants={itemVariants}>
-            <strong>Стоимость цемента в порту Астрахани:</strong> от 7 000 руб с НДС 20% за тонну (дешевле, чем ж/д и фурами).
+            <strong>Стоимость цемента в порту Астрахани:</strong> <span style={{ whiteSpace: 'nowrap' }}>от 11 500</span> руб с НДС 20% за тонну (окончательную стоимость узнавайте у менеджера).
           </motion.li>
           <motion.li variants={itemVariants}><strong>Налоги:</strong> Льготы по соглашению Иран-ЕАЭС.</motion.li>
         </motion.ul>
