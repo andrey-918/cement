@@ -122,7 +122,7 @@
     right: 0;
     background: var(--nav-bg);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--nav-border);
+    border-bottom: 1px solid var(--section-border);
     flex-direction: column;
     gap: 0;
     padding: 0;
@@ -137,7 +137,7 @@
     width: 100%;
     text-align: center;
     padding: 12px 15px;
-    border-bottom: 1px solid var(--nav-border);
+    border-bottom: 1px solid var(--section-border);
     font-size: 0.95em;
   }
 
@@ -225,7 +225,7 @@
     height: 120px;
     object-fit: cover;
     border-radius: 15px;
-    box-shadow: 0 10px 20px var(--final-img-shadow);
+    box-shadow: 0 10px 20px var(--img-shadow);
   }
 
   .cement-images img:hover {

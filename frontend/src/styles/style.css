@@ -22,20 +22,8 @@ body {
 
 /* Section Styles */
 .section {
-  margin: 100px 0;
-  padding: 80px 0;
+  margin: 50px 0;
   position: relative;
-}
-
-.section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100px;
-  background: linear-gradient(to bottom, var(--section-h2-gradient-start), transparent);
 }
 
 .section h2 {
@@ -59,12 +47,12 @@ body {
 
 /* Advantages */
 .advantages {
-  background: var(--advantages-bg);
+  background: var(--section-bg);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 60px;
   margin: 50px 0;
-  border: 1px solid var(--advantages-border);
+  border: 1px solid var(--section-border);
 }
 
 .advantages ul {
@@ -92,19 +80,19 @@ body {
 /* Route */
 .route {
   text-align: center;
-  background: var(--route-bg);
+  background: var(--section-bg);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 60px;
   margin: 50px 0;
-  border: 1px solid var(--route-border);
+  border: 1px solid var(--section-border);
 }
 
 .route img {
   max-width: 100%;
   height: auto;
   border-radius: 15px;
-  box-shadow: 0 20px 40px var(--route-img-shadow);
+  box-shadow: 0 20px 40px var(--img-shadow);
 }
 
 /* Iran Advantages */
@@ -143,12 +131,12 @@ body {
 
 /* Delivery */
 .delivery {
-  background: var(--delivery-bg);
+  background: var(--section-bg);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 60px;
   margin: 50px 0;
-  border: 1px solid var(--delivery-border);
+  border: 1px solid var(--section-border);
 }
 
 .delivery ol {
@@ -192,12 +180,12 @@ body {
 
 /* Technical, Financial, Safety */
 .technical, .financial, .safety {
-  background: var(--technical-bg);
+  background: var(--section-bg);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 40px;
   margin: 30px 0;
-  border: 1px solid var(--technical-border);
+  border: 1px solid var(--section-border);
   box-shadow: 0 10px 30px var(--advantages-shadow);
 }
 
@@ -213,12 +201,12 @@ body {
   flex-wrap: wrap;
   gap: 60px;
   justify-content: space-between;
-  background: var(--contacts-bg);
+  background: var(--section-bg);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 60px;
   margin: 50px 0;
-  border: 1px solid var(--contacts-border);
+  border: 1px solid var(--section-border);
   box-shadow: 0 20px 40px var(--advantages-shadow);
 }
 
@@ -259,7 +247,8 @@ body {
 
 .contact-center img {
   max-width: 150px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   filter: drop-shadow(0 10px 20px var(--advantages-shadow));
 }
 
@@ -290,10 +279,10 @@ body {
 }
 
 .cement-images img {
-  width: calc(30% - 10px);
+  width: calc(50% - 10px);
   min-width: 200px;
   border-radius: 15px;
-  box-shadow: 0 20px 40px var(--final-img-shadow);
+  box-shadow: 0 20px 40px var(--img-shadow);
 }
 
 .cement-images img:hover {
@@ -313,7 +302,7 @@ body {
   width: calc(30% - 10px);
   min-width: 200px;
   border-radius: 15px;
-  box-shadow: 0 20px 40px var(--final-img-shadow);
+  box-shadow: 0 20px 40px var(--img-shadow);
 
 }
 
