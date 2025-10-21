@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -253,6 +253,16 @@ body {
   filter: drop-shadow(0 10px 20px var(--advantages-shadow));
 }
 
+.contact-center {
+  text-align: center;
+}
+
+.contact-center img {
+  max-width: 150px;
+  margin-bottom: 30px;
+  filter: drop-shadow(0 10px 20px var(--advantages-shadow));
+}
+
 .contact-left a {
   color: var(--contact-link-color);
   text-decoration: none;
@@ -270,18 +280,38 @@ body {
   font-size: 1.1em;
 }
 
+/* Cement Images */
+.cement-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+
+.cement-images img {
+  width: calc(30% - 10px);
+  min-width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px var(--final-img-shadow);
+}
+
+.cement-images img:hover {
+  box-shadow: 0 30px 60px var(--final-img-hover-shadow);
+}
+
 /* Final Images */
 .final-images {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
   margin: 50px 0;
 }
 
 .final-images img {
-  width: 30%;
-  min-width: 300px;
+  width: calc(30% - 10px);
+  min-width: 200px;
   border-radius: 15px;
   box-shadow: 0 20px 40px var(--final-img-shadow);
 
@@ -368,6 +398,9 @@ body {
 .fade-in-up {
   animation: fadeInUp 0.8s ease-out;
 }
+
+
+
 
 
 

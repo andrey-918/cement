@@ -1,6 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { containerVariants, itemVariants } from '../../utils/animations'
+import boatInOcean1Image from '../images/boat-in-ocean-1.jpeg'
+import boatInOcean2Image from '../images/boat-in-ocean-2.jpg'
 
 const IntroSection: React.FC = () => {
   return (
@@ -15,13 +17,13 @@ const IntroSection: React.FC = () => {
       <div className="container">
         <motion.div className="cement-images" variants={itemVariants}>
           <motion.img
-            src="include/cement/boat-in-ocean-1.jpeg"
+            src={boatInOcean1Image}
             alt="Корабль в море"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           />
           <motion.img
-            src="include/cement/boat-in-ocean-2.jpg"
+            src={boatInOcean2Image}
             alt="Корабль в море"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}

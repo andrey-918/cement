@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { containerVariants, itemVariants } from '../../utils/animations'
 import { scrollToSection } from '../../utils/scroll'
+import logoImage from '../images/logo.png'
 
 interface ContactsSectionProps {
   isContactsExpanded: boolean
@@ -37,7 +38,7 @@ const ContactsSection: React.FC<ContactsSectionProps> = ({ isContactsExpanded, s
           >
             <motion.div className="contact-center" variants={itemVariants}>
               <motion.img
-                src="include/cement/logo.png"
+                src={logoImage}
                 alt="Логотип СМ ГРУПП"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}

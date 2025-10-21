@@ -23,8 +23,8 @@
   }
 
   .cement-images img {
-    width: calc(50% - 8px);
-    min-width: 220px;
+    width: calc(30% - 8px);
+    min-width: 180px;
   }
 
   .section p {
@@ -88,10 +88,6 @@
     align-items: center;
   }
 
-  .final-images img {
-    width: 80%;
-  }
-
   .call-to-action h3 {
     font-size: 1.8em;
     line-height: 1.3;
@@ -150,13 +146,8 @@
   }
 
   .cement-images {
-    flex-direction: column;
+    flex-direction:row;
     gap: 12px;
-  }
-
-  .cement-images img {
-    width: 100%;
-    max-width: 350px;
   }
 
   .delivery li {
@@ -222,19 +213,23 @@
 
   .cement-images {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
     align-items: center;
   }
 
   .cement-images img {
-    width: 100%;
-    max-width: 280px;
+    width: calc(50% - 5px);
+    max-width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px var(--final-img-shadow);
   }
 
-  .final-images img {
-    width: 90%;
-    min-width: 200px;
+  .cement-images img:hover {
+    box-shadow: 0 15px 30px var(--final-img-hover-shadow);
   }
 
   .call-to-action {

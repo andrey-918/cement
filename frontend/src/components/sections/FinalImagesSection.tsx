@@ -1,6 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { containerVariants, itemVariants } from '../../utils/animations'
+import cementWhite1Image from '../images/cement-white-1.jpeg'
+import cementWhite2Image from '../images/cement-white-2.jpeg'
+import cementWhite3Image from '../images/cement-white-3.jpeg'
 
 const FinalImagesSection: React.FC = () => {
   return (
@@ -15,19 +18,19 @@ const FinalImagesSection: React.FC = () => {
       <div className="container">
         <motion.div className="cement-images" variants={itemVariants}>
           <motion.img
-            src="include/cement/cement-white-1.jpeg"
+            src={cementWhite1Image}
             alt="Цемент в белых мешках в порту"
             whileHover={{ scale: 1.05, rotate: 2 }}
             transition={{ duration: 0.3 }}
           />
           <motion.img
-            src="include/cement/cement-white-2.jpeg"
+            src={cementWhite2Image}
             alt="Цемент в белых мешках в порту"
             whileHover={{ scale: 1.05, rotate: -2 }}
             transition={{ duration: 0.3 }}
           />
           <motion.img
-            src="include/cement/cement-white-3.jpeg"
+            src={cementWhite3Image}
             alt="Цемент в белых мешках в порту"
             whileHover={{ scale: 1.05, rotate: 1 }}
             transition={{ duration: 0.3 }}

@@ -1,6 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { containerVariants, itemVariants } from '../../utils/animations'
+import amirabadImage from '../images/amirabad.webp'
+import boatInOceanImage from '../images/boat-in-ocean.webp'
+import astrakhanImage from '../images/astrakhan.webp'
 
 const RouteSection: React.FC = () => {
   return (
@@ -22,19 +25,19 @@ const RouteSection: React.FC = () => {
         </motion.p>
         <motion.div className="cement-images" variants={itemVariants}>
           <motion.img
-            src="include/cement/amirabad.webp"
+            src={amirabadImage}
             alt="Сухогруз в порту Амирабад"
             whileHover={{ scale: 1.05, rotate: 2 }}
             transition={{ duration: 0.3 }}
           />
           <motion.img
-            src="include/cement/boat-in-ocean.webp"
+            src={boatInOceanImage}
             alt="Сухогруз в Каспийском море"
             whileHover={{ scale: 1.05, rotate: -2 }}
             transition={{ duration: 0.3 }}
           />
           <motion.img
-            src="include/cement/astrakhan.webp"
+            src={astrakhanImage}
             alt="Сухогруз в порту Астрахани"
             whileHover={{ scale: 1.05, rotate: 1 }}
             transition={{ duration: 0.3 }}

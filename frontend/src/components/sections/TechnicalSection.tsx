@@ -1,6 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { containerVariants, itemVariants } from '../../utils/animations'
+import boatInPort1Image from '../images/boat-in-port-1.webp'
+import boatInPort2Image from '../images/boat-in-port-2.jpeg'
+import boatInPort3Image from '../images/boat-in-port-3.jpg'
+import boatInPort4Image from '../images/boat-in-port-4.jpg'
 
 const TechnicalSection: React.FC = () => {
   return (
@@ -21,25 +25,25 @@ const TechnicalSection: React.FC = () => {
         </motion.ul>
         <motion.div className="cement-images" variants={itemVariants}>
           <motion.img
-            src="include/cement/boat-in-port-1.webp"
+            src={boatInPort1Image}
             alt="Сухогруз с цементом в порту Астрахани"
             whileHover={{ scale: 1.05, rotate: 1 }}
             transition={{ duration: 0.3 }}
           />
           <motion.img
-            src="include/cement/boat-in-port-2.jpeg"
+            src={boatInPort2Image}
             alt="Сухогруз с цементом в порту Астрахани"
             whileHover={{ scale: 1.05, rotate: -1 }}
             transition={{ duration: 0.3 }}
           />
           <motion.img
-            src="include/cement/boat-in-port-3.jpg"
+            src={boatInPort3Image}
             alt="Сухогруз с цементом в порту Астрахани"
             whileHover={{ scale: 1.05, rotate: 2 }}
             transition={{ duration: 0.3 }}
           />
           <motion.img
-            src="include/cement/boat-in-port-4.jpg"
+            src={boatInPort4Image}
             alt="Сухогруз с цементом в порту Астрахани"
             whileHover={{ scale: 1.05, rotate: -2 }}
             transition={{ duration: 0.3 }}
