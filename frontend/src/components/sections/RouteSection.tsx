@@ -18,7 +18,7 @@ const RouteSection: React.FC = () => {
       <div className="container">
         <motion.h2 variants={itemVariants}>Маршрут поставки</motion.h2>
         <motion.p variants={itemVariants}>
-          <strong>Иран, порт Амирабад → Каспийское море → Порт Астрахань</strong>
+          <strong>Иран, Амирабад → Астрахань / Махачкала / Новороссийск / Мариуполь</strong>
         </motion.p>
         <motion.p variants={itemVariants}>
           Морские грузоперевозки цемента: надежный логистический мост между Ираном и Россией.
