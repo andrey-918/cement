@@ -33,7 +33,7 @@ const IntroSection: React.FC = () => {
           <strong>ООО «СМ ГРУПП» — официальный представитель Иранского завода PJSC «Bojnurd Cement Company».</strong>
         </motion.p>
         <motion.p variants={itemVariants}>
-          Мы предлагаем высококачественный портландцемент типа ЦЕМ 0, класс прочности 42,5Б (аналог М500), соответствующий:
+          Мы предлагаем высококачественный портландцемент типа ЦЕМ 0 42,5Б, соответствующий:
         </motion.p>
         <motion.ul variants={itemVariants}>
           <motion.li variants={itemVariants}><strong>ГОСТ 31108-2020</strong></motion.li>

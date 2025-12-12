@@ -24,8 +24,13 @@ const ContactsSection: React.FC<ContactsSectionProps> = ({ isContactsExpanded, s
         <div className="contact-info">
           <motion.div className="contact-left" variants={itemVariants}>
             <p><strong>Общество с ограниченной ответственностью «СМ ГРУПП»</strong></p>
-            <p><strong>Тел.:</strong> 8 (495) 960-50-00</p>
-            <p><strong>Адрес:</strong> 105082, г. Москва, ул. Фридриха Энгельса, дом 75, строение 21</p>
+            <p>Телефон: <a href="tel:+74959605000" target="_blank" rel="noopener noreferrer">
+            8 (495) 960-50-00
+            </a> </p>
+            <p>E-mail: <a href="mailto:info@cementiran.ru" target="_blank" rel="noopener noreferrer">
+            info@cementiran.ru
+            </a> </p>
+            <p><strong>Адрес:</strong> 127018, г. Москва, Вн. Тер. г. Муниципальный округ Марьина Роща, ул. Полковая, д. 3, стр. 9, Помещ. 31</p>
           </motion.div>
           <motion.div
             initial={{ height: 0, opacity: 0 }}
@@ -51,8 +56,6 @@ const ContactsSection: React.FC<ContactsSectionProps> = ({ isContactsExpanded, s
             <motion.div className="contact-right" variants={itemVariants}>
               <p><strong>Юридический адрес:</strong><br />
                 127018, г. Москва, Вн. Тер. г. Муниципальный округ Марьина Роща, ул. Полковая, д. 3, стр. 9, Помещ. 31</p>
-              <p><strong>Почтовый адрес:</strong><br />
-                105082, г. Москва, ул. Фридриха Энгельса, дом 75, строение 21, почтовый ящик №19</p>
               <p><strong>Идентификатор ЭДО КонтурДиадок:</strong><br />
                 2BM-9715427862-771501001-202209221123303154947</p>
               <p><strong>Реквизиты:</strong></p>

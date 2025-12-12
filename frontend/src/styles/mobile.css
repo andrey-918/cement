@@ -115,6 +115,10 @@
     background: var(--nav-link-hover-bg);
   }
 
+  .contact-info {
+    display: none;
+  }
+
   .nav-list {
     position: absolute;
     top: 100%;

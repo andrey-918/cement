@@ -15,8 +15,8 @@ const DeliverySection: React.FC = () => {
       <div className="container">
         <motion.h2 variants={itemVariants}>Схема доставки</motion.h2>
         <motion.ol variants={itemVariants}>
-          <motion.li variants={itemVariants}><strong>Погрузка в Иране:</strong> Порт Бендер-Энзели или Амирабад.</motion.li>
-          <motion.li variants={itemVariants}><strong>Морской переход:</strong> Сухогрузы типа Handysize (10–20 тыс. тонн).</motion.li>
+          <motion.li variants={itemVariants}><strong>Погрузка в Иране:</strong> Амирабад.</motion.li>
+          <motion.li variants={itemVariants}><strong>Морской переход:</strong> Сухогрузы типа Handysize (1.5–10 тыс. тонн).</motion.li>
           <motion.li variants={itemVariants}><strong>Разгрузка в Астрахани:</strong> Глубина порта — до 6 м, подходит для река-море судов.</motion.li>
         </motion.ol>
         <motion.div className="map" variants={itemVariants}>

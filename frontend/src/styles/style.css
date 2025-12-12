@@ -253,7 +253,7 @@ body {
 }
 
 .contact-left a {
-  color: var(--contact-link-color);
+  color: inherit;
   text-decoration: none;
   font-size: 1.1em;
 

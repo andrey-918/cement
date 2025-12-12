@@ -18,8 +18,8 @@ const IranAdvantagesSection: React.FC = () => {
           <motion.li variants={itemVariants}>
             <strong>Выгодная цена:</strong> Иранский цемент дешевле аналогов из Турции или Китая. По качеству лучше большинства российских производств.
           </motion.li>
-          <motion.li variants={itemVariants}><strong>Качество:</strong> Соответствие ГОСТ (марки ПЦ-500).</motion.li>
-          <motion.li variants={itemVariants}><strong>Логистика:</strong> Короткий маршрут через Каспийское море (7–10 дней).</motion.li>
+          <motion.li variants={itemVariants}><strong>Качество:</strong> Соответствие ГОСТ 31108-2020.</motion.li>
+          <motion.li variants={itemVariants}><strong>Логистика:</strong> Короткий маршрут через Каспийское море (5–10 дней).</motion.li>
         </motion.ul>
       </div>
     </motion.section>

@@ -22,7 +22,12 @@ export const Footer: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <p>Тел.: 8 (495) 960-50-00</p>
+          <p>Телефон: <a href="tel:+74959605000" target="_blank" rel="noopener noreferrer">
+            8 (495) 960-50-00
+          </a> </p>
+          <p>E-mail: <a href="mailto:info@cementiran.ru" target="_blank" rel="noopener noreferrer">
+            info@cementiran.ru
+          </a> </p>
           <a href="https://www.tk-cm.ru" target="_blank" rel="noopener noreferrer">
             www.tk-cm.ru
           </a>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { scrollToSection } from '../../utils/scroll'
+import logoImage from '../images/logo.png'
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -44,6 +45,10 @@ export const Header: React.FC = () => {
             </li>
           ))}
         </ul>
+        <div className="contact-info">
+          <a href="tel:+74959605000" className="contact-link">8 (495) 960-50-00</a>
+          <a href="mailto:info@cementiran.ru" className="contact-link">info@cementiran.ru</a>
+        </div>
       </nav>
       <div className="container">
         <motion.h1
